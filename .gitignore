@@ -1,0 +1,16 @@
+## MAC files ##
+.DS_Store
+
+## NPM ##
+npm
+npm-debug.log
+node_modules
+
+## prettier config ##
+.prettierrc
+
+## environment ##
+.env
+
+## bundle ##
+client/dist/bundle.js
