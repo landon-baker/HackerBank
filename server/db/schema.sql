@@ -1,0 +1,20 @@
+DROP DATABASE IF EXISTS Bank;
+
+CREATE DATABASE Bank;
+
+\c bank;
+
+CREATE TABLE Users (
+  ID SERIAL PRIMARY KEY,
+  Username VARCHAR UNIQUE,
+  Password VARCHAR,
+  Balance DECIMAL
+);
+
+CREATE TABLE Transactions (
+  ID SERIAL PRIMARY KEY,
+  TxType VARCHAR,
+  UserID INT NOT NULL REFERENCES Users(ID),
+  TransfereeID INT REFERENCES Users(ID),
+  Amount DECIMAL
+);
